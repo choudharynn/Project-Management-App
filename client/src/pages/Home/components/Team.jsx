@@ -55,10 +55,16 @@ const TeamContainer = styled.div`
 const Team = () => {
   const member = [{
     photo: "https://avatars.githubusercontent.com/u/64485885?v=4",
-    name: "Rishav Chanda",
+    name: "Muzzafer Choudhary",
     title: "Full-Stack Developer",
     bio: "I have expertise in full-stack web development, Android app development, and MERN stack development. I am knowledgeable in various programming languages, frameworks, and technologies and strive to create high-quality, user-friendly applications."
-  }]
+  },{
+    photo: "https://avatars.githubusercontent.com/u/64485885?v=4",
+    name: "Anurag Pal",
+    title: "Full-Stack Developer",
+    bio: "I have expertise in full-stack web development, Android app development, and MERN stack development. I am knowledgeable in various programming languages, frameworks, and technologies and strive to create high-quality, user-friendly applications."
+  }
+]
   return (
     <TeamWrapper id="team">
       <Title>Meet the crew</Title>
