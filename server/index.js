@@ -59,6 +59,6 @@ app.use((err, req, res, next)=>{
 })
 
 app.listen(port,()=>{
-    console.log("Connected")
+    console.log("Connected running on port:",port)
     connect();
 })

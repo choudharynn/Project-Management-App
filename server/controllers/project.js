@@ -269,20 +269,25 @@ export const inviteProjectMember = async (req, res, next) => {
 //verify invitation and add to project member
 export const verifyInvitation = async (req, res, next) => {
   try {
+    console.log("here")
+    res.send("here")
     const { projectid, userid, access, role } = req.query;
     const code = req.params.code;
     if (code === req.app.locals.CODE) {
       req.app.locals.CODE = null;
       req.app.locals.resetSession = true;
       const project = await Project.findById(projectid);
+      // console.log(project)
       if (!project) return next(createError(404, "Project not found!"));
       const user = await User.findById(userid);
       if (!user) {
         return next(createError(404, "User not found"));
       }
-
+      // console.log(user)
+      console.log("here")
       for (let i = 0; i < project.members.length; i++) {
         if (project.members[i].id === user.id) {
+          console.log("already member")
           return next(createError(403, "You are already a member of this project!"));
         }
       }

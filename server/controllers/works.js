@@ -6,6 +6,7 @@ import jwt from "jsonwebtoken";
 import nodemailer from "nodemailer";
 import dotenv from 'dotenv';
 import Works from "../models/Works.js";
+import Project from "../models/Project.js";
 
 
 export const addWork = async (req, res, next) => {
